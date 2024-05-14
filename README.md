@@ -1,3 +1,3 @@
-# Example Disco Node Site
+# Example disco Node Site
 
-See Documentation TODO
+[See the documentation](https://docs.letsdisco.dev/deployment-guides/node)
