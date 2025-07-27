@@ -17,20 +17,20 @@ io.on("connection", (socket) => {
     id: socket.id,
     position: [0, 0, 0],
     rotation: [0, 0, 0],
-    room: "melencoliaHub", // default room
+    room: "jnl", // default room
   };
 
   // Add player to default room
-  if (!rooms.has("melencoliaHub")) {
-    rooms.set("melencoliaHub", new Set());
+  if (!rooms.has("jnl")) {
+    rooms.set("jnl", new Set());
   }
-  rooms.get("melencoliaHub").add(player);
+  rooms.get("jnl").add(player);
 
   // Join the socket room
-  socket.join("melencoliaHub");
+  socket.join("jnl");
 
   // Send only players in the same room to the new player
-  const roomPlayers = Array.from(rooms.get("melencoliaHub"));
+  const roomPlayers = Array.from(rooms.get("jnl"));
   socket.emit("players", roomPlayers);
 
   socket.on("move", (position, rotation) => {
